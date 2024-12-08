@@ -3,7 +3,7 @@ name: Create Release on Tag
 on:
   push:
     tags:
-      - "v*.*.*"
+      - "v19.07.10"
   workflow_call:
     inputs:
       tag_name:
@@ -44,7 +44,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   build:
-    name: "v${{ matrix.build_env.tag }} - ${{ matrix.build_env.pkgarch}} :: ${{ matrix.build_env.target}}/${{ matrix.build_env.subtarget}} build"
+    name: "v${{ matrix.build_env.19.07.10 }} - ${{ matrix.build_env.mips_24kc}} :: ${{ matrix.build_env.ar71xx}}/${{ matrix.build_env.generic}} build"
     runs-on: ubuntu-latest
     needs: generate-config
     strategy:
